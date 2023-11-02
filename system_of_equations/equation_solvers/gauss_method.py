@@ -1,4 +1,4 @@
-class GaussianElimination:
+class GaussMethod:
     """
     A class for performing Gaussian elimination on a matrix to solve linear systems of equations.
 

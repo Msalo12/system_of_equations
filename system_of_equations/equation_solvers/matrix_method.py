@@ -1,4 +1,4 @@
-class MatrixLinearSystemSolver:
+class MatrixMethod:
     """
     A class for solving a system of linear equations using the matrix inversion method.
 

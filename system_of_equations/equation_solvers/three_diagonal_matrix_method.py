@@ -1,4 +1,4 @@
-class TridiagonalSolver:
+class TridiagonalMatrixMethod:
     """
     A class for solving linear systems of equations represented by a tridiagonal matrix.
 
@@ -26,10 +26,7 @@ class TridiagonalSolver:
         - c: Diagonal above the main diagonal of the matrix.
         - d: Vector of free terms.
         """
-        self.a = a
-        self.b = b
-        self.c = c
-        self.d = d
+
 
     def solve_linear_system(self):
         """

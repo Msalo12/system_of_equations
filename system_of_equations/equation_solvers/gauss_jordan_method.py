@@ -1,4 +1,4 @@
-class GaussJordan:
+class GaussJordanMethod:
     """
     A class for performing Gauss-Jordan elimination on a matrix to solve linear systems of equations.
 
