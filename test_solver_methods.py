@@ -3,6 +3,7 @@ from system_of_equations.equation_solvers.gauss_method import GaussMethod
 from system_of_equations.equation_solvers.matrix_method import MatrixMethod
 from system_of_equations.equation_solvers.simple_iterations_method import SimpleIterationMethod
 from system_of_equations.equation_solvers.three_diagonal_matrix_method import TridiagonalMatrixMethod
+from system_of_equations.equation_solvers.linear_equation_solver import LinearEquationSolver
 
 # Test for GaussJordanMethod
 print("Testing GaussJordanMethod...")

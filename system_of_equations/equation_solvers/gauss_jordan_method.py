@@ -1,8 +1,9 @@
 import numpy as np
 from system_of_equations.decorator.decorators import check_square, check_singular
+from system_of_equations.equation_solvers.linear_equation_solver import LinearEquationSolver
 
 
-class GaussJordanMethod:
+class GaussJordanMethod(LinearEquationSolver):
 
     """
     A class for performing Gauss-Jordan elimination on a matrix to solve linear systems of equations.
