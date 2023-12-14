@@ -44,7 +44,7 @@ class SimpleIterationMethod:
             if abs(mat[i][i]) <= sum:
                 return False
         return True
-    def solve(self):
+    def solve_linear_system(self):
         """
         Solves the system of linear equations using the Simple Iteration Method.
 
