@@ -1,6 +1,9 @@
 import numpy as np
 from system_of_equations.decorator.decorators import check_square, check_singular
-class MatrixMethod:
+from system_of_equations.equation_solvers.linear_equation_solver import LinearEquationSolver
+
+
+class MatrixMethod(LinearEquationSolver):
     """
     A class for solving a system of linear equations using the matrix inversion method.
 

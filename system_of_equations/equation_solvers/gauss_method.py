@@ -1,7 +1,9 @@
 import numpy as np
+from system_of_equations.equation_solvers.linear_equation_solver import LinearEquationSolver
+
 
 from system_of_equations.decorator.decorators import check_square
-class GaussMethod:
+class GaussMethod(LinearEquationSolver):
     """
     A class for performing Gaussian elimination on a matrix to solve linear systems of equations.
 

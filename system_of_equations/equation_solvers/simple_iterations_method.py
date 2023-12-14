@@ -1,5 +1,7 @@
 import numpy as np
-class SimpleIterationMethod:
+from system_of_equations.equation_solvers.linear_equation_solver import LinearEquationSolver
+
+class SimpleIterationMethod(LinearEquationSolver):
     """
     A class for solving a system of linear equations using the Simple Iteration Method.
 

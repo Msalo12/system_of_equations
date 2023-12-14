@@ -1,5 +1,8 @@
 import numpy as np
-class TridiagonalMatrixMethod:
+from system_of_equations.equation_solvers.linear_equation_solver import LinearEquationSolver
+
+
+class TridiagonalMatrixMethod(LinearEquationSolver):
 
     """
     A class for solving linear systems of equations represented by a tridiagonal matrix.
