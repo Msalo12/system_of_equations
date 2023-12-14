@@ -28,7 +28,6 @@ class GaussMethod:
         """
         self.matrix = np.array(matrix, dtype=float)
 
-    @check_square
     def upper_triangle_form(self):
         """
         Reduces the matrix to its upper triangular form.
@@ -60,7 +59,7 @@ class GaussMethod:
 
         return self.matrix
 
-    @check_square
+
     def solve_linear_system(self):
         """
         Solves a system of linear equations represented by the augmented matrix using the Gaussian elimination method.

@@ -29,7 +29,7 @@ class GaussJordanMethod:
         - matrix: The matrix representing a system of linear equations, including the right-hand side.
         """
         self.matrix = np.array(matrix, dtype=float)
-    @check_square
+    #@check_square
     def reduce_to_rref(self):
         """
         Reduces the matrix to its reduced row-echelon form (RREF).
@@ -47,7 +47,7 @@ class GaussJordanMethod:
                     self.matrix[j] = self.matrix[j] - self.matrix[i] * self.matrix[j, i]
         return self.matrix
 
-    @check_square
+
     @check_singular
     def solve_linear_system(self):
         """

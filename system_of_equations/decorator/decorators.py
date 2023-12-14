@@ -14,12 +14,14 @@ def check_square(func):
     Returns:
     - callable: A decorated function that operates on a square matrix.
     """
-    def wrapper(matrix, *args, **kwargs):
-        if matrix.shape[0] != matrix.shape[1]:
-            raise NonSquareMatrixError(matrix)
-        return func(matrix, *args, **kwargs)
-    return wrapper
+    def wrapper(self, *args, **kwargs):
+        # Determine which attribute to check based on the class
+        matrix_to_check = self.matrix if hasattr(self, 'matrix') else self.coefficient_matrix
 
+        if matrix_to_check.shape[0] != matrix_to_check.shape[1]:
+            raise NonSquareMatrixError(matrix_to_check)
+        return func(self, *args, **kwargs)
+    return wrapper
 def check_singular(func):
     """
     A decorator that checks if the input matrix is singular (non-invertible) before executing the decorated function.
@@ -33,10 +35,12 @@ def check_singular(func):
     Returns:
     - callable: A decorated function that operates on a non-singular matrix.
     """
-    def wrapper(matrix, *args, **kwargs):
-        if np.linalg.det(matrix) == 0:
+    def wrapper(self, *args, **kwargs):
+        # Extract the coefficient matrix (assuming the last column is the constant term)
+        coeff_matrix = self.matrix[:, :-1]
+        if np.linalg.det(coeff_matrix) == 0:
             raise SingularMatrixError()
-        return func(matrix, *args, **kwargs)
+        return func(self, *args, **kwargs)
     return wrapper
 
 def check_tridiagonal(func):

@@ -29,7 +29,6 @@ class MatrixMethod:
         self.right_hand_side = np.array(right_hand_side, dtype=float)
 
     @check_square
-    @check_singular
     def solve(self):
         """
         Solves the system of linear equations using the matrix inversion method.

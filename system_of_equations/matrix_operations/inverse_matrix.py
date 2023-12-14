@@ -1,6 +1,6 @@
 import numpy as np
 import sys
-from matrix import Matrix
+from system_of_equations.matrix_operations.matrix import Matrix
 
 class MatrixInversion:
     """
