@@ -21,7 +21,7 @@ print("\nTesting MatrixMethod...")
 coefficient_matrix = [[4, 12, -16], [12, 37, -43], [-16, -43, 98]]
 right_hand_side = [1, 2, 3]
 mm_method = MatrixMethod(coefficient_matrix, right_hand_side)
-print("Solution:", mm_method.solve())
+print("Solution:", mm_method.solve_linear_system())
 
 # Test for SimpleIterationMethod
 print("\nTesting SimpleIterationMethod...")
@@ -30,7 +30,7 @@ initial_guess = [1, 1, 1]
 tolerance = 0.01
 max_iterations = 100
 si_method = SimpleIterationMethod(matrix, initial_guess, tolerance, max_iterations)
-print("Solution:", si_method.solve())
+print("Solution:", si_method.solve_linear_system())
 
 # Test for TridiagonalMatrixMethod
 print("\nTesting TridiagonalMatrixMethod...")
