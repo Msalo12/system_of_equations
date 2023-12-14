@@ -1,3 +1,5 @@
+import numpy as np
+from system_of_equations.decorator.decorators import check_square, check_singular
 class MatrixMethod:
     """
     A class for solving a system of linear equations using the matrix inversion method.
@@ -23,7 +25,11 @@ class MatrixMethod:
         - coefficient_matrix: The coefficient matrix of the system of linear equations.
         - right_hand_side: The vector representing the right-hand side of the equations.
         """
+        self.coefficient_matrix = np.array(coefficient_matrix, dtype=float)
+        self.right_hand_side = np.array(right_hand_side, dtype=float)
 
+    @check_square
+    @check_singular
     def solve(self):
         """
         Solves the system of linear equations using the matrix inversion method.
@@ -34,3 +40,6 @@ class MatrixMethod:
         Raises:
         ValueError: If the coefficient matrix is singular and cannot be inverted.
         """
+        inverse_matrix = np.linalg.inv(self.coefficient_matrix)
+        solution = np.dot(inverse_matrix, self.right_hand_side)
+        return solution.tolist()
